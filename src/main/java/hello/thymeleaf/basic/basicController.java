@@ -123,4 +123,10 @@ public class basicController {
         list.add(new User("userC", 30));
         model.addAttribute("users", list);
     }
+
+    @GetMapping("/comments")
+    public String comments(Model model) {
+        model.addAttribute("data", "Spring!");
+        return "basic/comments";
+    }
 }
